@@ -3,6 +3,11 @@ import os
 import sys
 from bs4 import BeautifulSoup, Tag
 
+
+if len(sys.argv) != 3:
+    print("Usage: python style_html.py <input_path.html> <output_path.html>")
+    sys.exit(1)
+
 path = sys.argv[1]
 save_path = sys.argv[2]
 with open(path, "r") as f:
